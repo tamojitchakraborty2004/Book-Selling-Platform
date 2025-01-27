@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Selling Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-purple-900 to-slate-900 min-h-screen flex justify-center items-center">
+
+    <div class="w-full max-w-lg p-8 bg-white rounded-2xl shadow-2xl transform transition-all duration-300 ease-in-out scale-90 hover:scale-100 hover:shadow-3xl">
+        <nav class="mb-6 text-center">
+            <h1 class="text-3xl font-semibold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">BookStore</h1>
+            <div id="user-info" class="text-sm text-gray-500 mt-2"></div>
+        </nav>
+
+        <!-- Login Form -->
+        <div id="login-form" class="form-container space-y-6">
+            <h2 class="text-xl font-semibold text-center text-gray-800">Login</h2>
+            <input type="text" id="username" class="w-full p-4 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter username">
+            <button onclick="login()" class="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300">Login</button>
+        </div>
+
+        <!-- Book Section (hidden by default) -->
+        <div id="book-section" class="hidden space-y-6">
+            <h2 class="text-2xl font-semibold text-center text-gray-800">Available Books</h2>
+            <div id="books-list" class="space-y-4"></div>
+            
+            <h2 class="text-xl font-semibold text-center text-gray-800">Buy a Book</h2>
+            <input type="text" id="buy-book-title" class="w-full p-4 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter Book Title">
+            <button onclick="buyBook()" class="w-full py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300">Buy Book</button>
+            
+            <h2 class="text-xl font-semibold text-center text-gray-800">Sell a Book</h2>
+            <input type="text" id="book-title" class="w-full p-4 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Book Title">
+            <input type="text" id="book-author" class="w-full p-4 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Author">
+            <input type="number" id="book-price" class="w-full p-4 rounded-lg border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Price">
+            <button onclick="sellBook()" class="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">Sell Book</button>
+        </div>
+    </div>
+
+</body>
+</html>
